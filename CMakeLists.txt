@@ -12,11 +12,11 @@ find_package(fmt REQUIRED)
 include_directories(${CERES_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIR})
 
 # library
-add_library(DeepArcManager src/DeepArcManager.cc)
+add_library(LightFieldCamManager src/LightFieldCamManager.cc)
 
 # Make SFM executable
 add_executable(sfm src/sfm.cc)
-target_link_libraries(sfm  DeepArcManager ${CERES_LIBRARIES} fmt::fmt)
+target_link_libraries(sfm  LightFieldCamManager ${CERES_LIBRARIES} fmt::fmt)
 
 # Debian / Ubuntu DEB support 
 

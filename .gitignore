@@ -1,0 +1,5 @@
+bin/
+data/
+output/
+*.ply
+.vscode/settings.json

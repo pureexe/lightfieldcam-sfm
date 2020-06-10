@@ -102,14 +102,13 @@ void LightFieldCamManager::resetCamera(){
       this->extrinsics[id].setTranslation(translation);
     }
   }
-  this->intrinsics[0].focal(0) = 100.0;
+  //this->intrinsics[0].focal(0) = 100.0;
 }
 
 vector<double*> LightFieldCamManager::getParamBlocks(int kid) {
   const Keypoint &kp = keypoints[kid];
   const Intrinsic &intrinsic = this->intrinsics[0];
   const Extrinsic &extrinsic = this->extrinsics[kp.extrinsic_id];
-
   vector<double *> params = {
     this->points[kp.point_id].data(),
     (double*)intrinsic.center.data(),
